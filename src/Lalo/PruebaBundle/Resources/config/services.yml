@@ -1,0 +1,7 @@
+parameters:
+#    lalo_prueba.example.class: Lalo\PruebaBundle\Example
+
+services:
+#    lalo_prueba.example:
+#        class: %lalo_prueba.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

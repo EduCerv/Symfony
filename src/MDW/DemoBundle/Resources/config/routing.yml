@@ -1,0 +1,40 @@
+mdw_demo_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: MDWDemoBundle:Default:index }
+articulos:
+    pattern: /articulos
+    defaults: { _controller: MDWDemoBundle:Default:articulos }
+articulo:
+    pattern: /articulo/{id}
+    defaults: { _controller: MDWDemoBundle:Default:articulo }  
+articulo_listar:
+    pattern: /articulos/listar
+    defaults: { _controller: MDWDemoBundle:Articulos:listar }
+articulo_crear:
+    pattern: /articulos/crear
+    defaults: { _controller: MDWDemoBundle:Articulos:crear }
+articulo_editar:
+    pattern: /articulos/editar/{id}
+    defaults: { _controller: MDWDemoBundle:Articulos:editar }
+articulo_visualizar:
+    pattern: /articulos/visualizar/{id}
+    defaults: { _controller: MDWDemoBundle:Articulos:visualizar }
+articulo_borrar:
+    pattern: /articulos/borrar/{id}
+    defaults: { _controller: MDWDemoBundle:Articulos:borrar }
+hola:
+    pattern: /hola
+    defaults: { _controller: MDWDemoBundle:Default:hola }
+ejemplo1:
+    pattern: /ejemplo1
+    defaults: { _controller: MDWDemoBundle:Default:ejemplo1 }
+ejemplo2:
+    pattern: /ejemplo2
+    defaults: { _controller: MDWDemoBoundle:Default:ejemplo1 }
+herencia:
+    pattern: /herencia
+    defaults: { _controller: MDWDemoBundle:Default:heredar }
+menu:
+    pattern: /inicio    
+    defaults: { _controller: MDWDemoBundle:Default:menu }
+ 

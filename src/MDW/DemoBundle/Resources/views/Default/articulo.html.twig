@@ -1,0 +1,36 @@
+{% extends "::inicio.html.twig"%}
+   
+   
+    {% block title%}
+           Auto {{articulo.id}}
+    {%endblock%}
+          
+    {% block sub %}
+           <h1>Articulo con ID {{articulo.id}}</h1>
+    {% endblock %}   
+           
+    {% block body %}
+       <ul>
+           <li>Titulo: {{articulo.title}}</li>
+           <li>Fecha de creacion: {{articulo.created}}</li>
+           <li>Descripcion: {{articulo.description}}</li>
+       </ul>             
+         
+            <img src="{{asset ('imagenes/ferrari-250gto01.jpg')}}" alt="FRR" name="grande" width="338" height="253" id="grande"/>
+                <div id="peques">
+                    <a href="http://www.super-autos.net/ferrari/autos/ferrari-250gto.html">
+                     <img src="{{asset ('imagenes/ferrari-250gto01.jpg')}}" width="72" height="48" border="0"/>
+                     </a>
+                     <a href="http://www.super-autos.net/ferrari/autos/ferrari-340mexico.html">   
+                     <img src="{{asset ('imagenes/ferrari-340mexico01.jpg')}}" width="72" height="48" border="0">
+                      </a>
+                     <a href="http://www.super-autos.net/ferrari/autos/ferrari-sp12-ec.html">
+                     <img src="{{asset ('imagenes/ferrari-sp12-ec-02.jpg')}}" width="72" height="48" border="0"/>
+                     </a>
+                     <a href="http://www.super-autos.net/ferrari/autos/ferrari-sp12-ec.html">
+                     <img src="{{asset ('imagenes/ferrari-sp12-ec-01.jpg')}}" width="72" height="48" border="0"/>
+                     </a>      
+                </div>
+           
+
+    {% endblock  %}

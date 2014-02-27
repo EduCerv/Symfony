@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/02/2014, 09:02:27 AM
+    Author     : Lionsgate
+*/
+body{
+    background: #D3D3D3;
+}
+#todo{
+    margin:auto;
+    width: 1000px;
+    height: auto;
+    background:#f9ecec;
+}
+#footer{
+    margin: auto;
+    width: 1000px;
+   text-align: center;
+   background: #6b9311;
+   text-shadow: 1px 1px 1px white;
+}
+#inicial{
+    margin: auto;
+    width: 1000px;
+    height: 70px;
+}
+* {
+    padding: 0px;
+    margin: 0px;    
+}
+#header{
+    margin:auto;
+    width: 1000px;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+ul, ol{
+    list-style:none;
+.nav li a {
+}
+   /* background-color: #000;
+    color: #FFF;
+    text-decoration: none; 
+    /*padding: 10px 15px;
+   // display: block
+}*/
+.nav li a:hover {
+background-color: #434343;    
+}/*
+.nav > li{
+    float: left;
+}
+.nav li ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;    
+}
+.nav li:hover > lu{
+    display: block;    
+}
+*/

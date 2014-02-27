@@ -1,0 +1,3 @@
+informacion:
+    pattern:  /informacion
+    defaults: { _controller: LaloPruebaBundle:Default:index }

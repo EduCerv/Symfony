@@ -1,0 +1,16 @@
+<form  id="form_datos" action="{{path('informacion')}}" method="POST"> 
+    <input type="tetx" id="nombre" name="nombre" placeholder="Nombre" />
+    <br/>
+    <input type="tetx" id="apellido"  name="apellido"placeholder="Apellido"/>
+    <br/>
+    <input type="tetx" id="escuela" name="escuela" placeholder="Escuela"/>       
+    <br/>
+    <input type="submit" id="guardar" name="Guardar" value="Guardar" />                    
+</form>
+
+
+<div id="datos_formulario" style="{% if content['nombre'] is defined %}display:block{%endif%}" >
+    Nombre: {% if content['nombre'] is defined %} {{content['nombre']}} {% endif %}<br/>
+    Apellido: {% if content['apellido'] is defined %} {{content['apellido']}} {% endif %}<br/>
+      Escuela: {% if content['escuela'] is defined %} {{content['escuela']}} {% endif %}<br/>
+</div>

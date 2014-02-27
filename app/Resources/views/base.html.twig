@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id='titulo'>
+            {% block title %}
+            {% endblock %}
+        </title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">  
+        <link href="{{ asset ('/css/format.css')}}" type="text/css" rel="stylesheet"/>
+        {% block javascripts%}
+        {%  endblock %}
+    </head>
+{% block body %}
+{% endblock %}      
+
+
+    </body>
+</html>

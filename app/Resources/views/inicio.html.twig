@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" >
+    <head>
+        <meta charset="iso-8859-1">
+            <meta name="description" content="Ejemplo de HTML5">
+                <meta name="keywords" content="HTML5, CSS3, JavaScript">
+
+ {% block stylesheets %}
+
+     {% stylesheets
+       '@MDWDemoBundle/Resources/css/format.css'
+    %}
+
+                    <link rel="stylesheet" href="{{ asset_url }}" id="galleria-theme" />
+    {% endstylesheets %}
+
+{% endblock stylesheets %}
+
+
+                    <title>      
+    {% block title %}
+                        Inicio
+    {% endblock %}
+                    </title>
+                    </head>
+                    <body backgroung="{{asset('')}}">
+
+
+                        <header>
+                            <div id="inicial">
+                                <img src="{{ asset ('imagenes/portada.jpg' ) }}" />
+                            </div>                
+                            <div id="header">
+                                <ul class="nav">
+                                    <li>
+                                        <a href="{{ path('menu')}}">Inicio</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{path('articulos')}}">Autos</a>          
+                                        <ul> 
+                                            <li>      
+                                                <a href="{{ path('articulo', {'id': 1})}}">Ferrari SP12 EC </a>          
+                                            </li>
+                                            <li>
+                                                <a href="{{ path('articulo', {'id' : 2})}}">Ferrari 340 Mexico</a>
+                                            </li>   
+                                            <li>                  
+                                                <a href="{{ path('articulo', {'id' : 3})}}">Ferrari 250 GTO</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('informacion')}}">Informacion.</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </header>
+                        <div id="todo">
+
+            {% block inicio %}            
+            {% endblock %}   
+
+
+            {% block sub %}                
+            {% endblock %} 
+
+
+            {% block body %}      
+            {% endblock %}    
+
+                        </div>
+                        <div id="footer">
+                            <footer>
+                                <img src="{{ asset ('imagenes/infoexpo.jpg' ) }}" />
+                                <br/> 
+                                    Derechos Reservados &copy 2014-2015   
+                            </footer>
+                        </div>
+
+        {% block javascripts %}
+
+                        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+                        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+                        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+                        <script language="text/javascript" type="text/javascript"  src="{{ asset('js/validacion.js') }}"></script>
+
+                        <script type="text/javascript">
+
+                            $(document).ready(function() {
+
+                                $("#peques img").hover(function() {
+                                    var imagen = $(this).attr("src");
+                                    $("#grande").attr("src", imagen);
+                                });
+                            });
+                        </script>
+        {% endblock %}
+
+            {% block loader %}
+    {% include '::loader.html.twig' %}
+{% endblock %}
+
+
+                    </body>     
+                    </html> 
